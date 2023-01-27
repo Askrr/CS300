@@ -1,0 +1,58 @@
+Week 3 Pseudocode and Reflection
+Benjamin Leanna 
+
+These are the functions we are asked to implement in this week's Link List program:
+
+DEF append funtion:
+	CREATE new node
+	IF null pointer equals head
+		new node becomes the head and the tail
+		increase size count
+	ELSE
+		make current tail node point to the new node
+		tail becomes the new node
+		increase size count
+
+DEF preprend function
+	CREATE new node
+	IF null pointer equals head
+		new node comes the head and the tail
+		increase size count
+	ELSE
+		make neck node equal the head
+		head becomes the new node
+		increase size count
+
+DEF printlist function
+	start at the head
+	WHILE current pointer is at head
+		PRINT current bidID, bid title, bid amount, bid fund
+		current pointer equals to the next pointer
+
+DEF remove function
+	start at the head
+	IF current pointer and current bidID equal the bidID
+		make head point to the next node in the list
+		DELETE current pointer
+		decrease size count
+		RETURN
+	WHILE loop over each node looking for a match
+		IF the next node bidID is equal to the current bidID
+			hold onto the next node temporarily
+			make current node point beyond the next node
+			DELETE the temporary node
+			decrease size count
+			RETURN
+	current node is now equal to next node
+	RETURN
+	
+DEF search function
+	CREATE new node to equal the head
+	WHILE new node 
+		IF bidID equals the new node at the bidID
+			RETURN the bid at the new node
+		the new node becomes the next node
+	RETURN bid fuction
+	
+	
+In the code we were asked to write, a lot of it was sort of redundent but gave good practice on creation, manipulation, and implementation of pointers. The code needed to be able to append, prepend, print, remove, adn search through different bids pulled from a CSV file. Before this week's lecture, I was having the issue at line 167 of the original code that had an extra curley bracket inserted into the code. I read up a bit on StackOverflow on using pointers in C++ to better understand how they were being used and now in this language we need to remove them manually since there isn't a garbage collector to automatically free up memory. the zyBooks goes over everything but explains it in the hardest way possible in my opinion. I like the lectures recorded for us on YouTube because it gives a personal reference on what we are doing and the thought process behind it instead of just "this is what this is and here's the dictionary response explaination". 
